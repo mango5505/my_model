@@ -1,17 +1,17 @@
-# {{usct.Name}}
+# {{usct.preprocessing}}
 
-{{1.Description}}
+{{preprocessing.matchTemplate}}
 
 ### Parameters
 | Parameter | Type | Description |  Default  |
 |:----------|:-----|:------------|:----------|
-|test|int|test number|required|
-|...|...|...|...|
+|scr_path|str|path of jpg/png/... format 3 channel image|required|
+|templ_path|str|path of jpg/png/... format 3 channel image|required|
 
 ### Returns
 | Type | Description |
 |:-----|:------------|
-|array| test return|
+|numpy.ndarray| 1 channel image data|
 
 ### Example
 
