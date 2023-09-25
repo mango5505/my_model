@@ -9,7 +9,7 @@ python, process the raw data of ultrasound equipment to obtain the intima region
 |templ_path|str|path of jpg/png/... format 3 channel image|required|
 |draw_site|bool|Whether to display the positioning diagram|required|
 
-### Returns
+### Returnss
 | Type | Description |
 |:-----|:------------|
 |numpy.ndarray| 1 channel image data|
