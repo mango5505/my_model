@@ -19,8 +19,16 @@ python, process the raw data of ultrasound equipment to obtain the intima region
 ```http
 读入原始图像路径，显示原始图像
 scr_path='\xxxxxxx\scr.png'
-img = cv2.imread(scr_path)
+img1 = cv2.imread(scr_path)
 cv2.imshow('raw image', img)
+cv2.waitKey(0)
+```
+![raw image](https://raw.githubusercontent.com/mango5505/my_model/main/3.JPG?token=GHSAT0AAAAAACGFRKLVJQXI5L7PLHGXKBTGZISRNEQ "raw image")
+```http
+读入模板路径，显示模板图像
+templ_path='\xxxxxxx\template.png'
+img2 = cv2.imread(temple_path)
+cv2.imshow('template image', img2)
 cv2.waitKey(0)
 ```
 ```http
