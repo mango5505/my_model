@@ -17,8 +17,14 @@ python, process the raw data of ultrasound equipment to obtain the intima region
 ### Example
 
 ```http
-
-result=matchTemplate(\scr_path='xxxxxxx\scr.png',templ_path='\xxxxxxx\template.png',draw_site=False)
-
+读入原始图像路径，显示原始图像
+scr_path='\xxxxxxx\scr.png'
+img = cv2.imread(scr_path)
+cv2.imshow('raw image', img)
+cv2.waitKey(0)
 ```
+```http
+result=matchTemplate(\scr_path='xxxxxxx\scr.png',templ_path='\xxxxxxx\template.png',draw_site=False)
+```
+
 
