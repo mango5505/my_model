@@ -47,7 +47,9 @@ USCT.preprocessing.MatchTemplate(
 
 &emsp;&emsp;模板匹配是一种在较大原始图像中搜索和查找模板图像位置的方法。OpenCV附带了一个函数cv.matchTemplate（）来实现此目的。它将模板图像滑过原始图像，并在模板图像下比较原始图像，计算匹配程度，每个滑动到的位置的匹配程度对应一个灰度值，模板滑过整张原始图像返回一个灰度图像，其中每个像素表示该像素的邻域与模板的匹配程度。<br>
 &emsp;&emsp;如果输入图像的大小为 （WxH），模板图像的大小为 （wxh），则输出图像的大小将为 （W-w+1， H-h+1）。根据匹配公式:<br>
-$$R(x,y)=\frac{\sum_{x',y'}(T(x',y')-I(x+x',y+y'))^2}{\sqrt[2]{\sum_{x',y'}T(x',y')^2\times}\sum_{x',y'}I(x+x',y+y')^2}$$
+\begin{gathered}
+R(x',y')=\frac{\sum_{x',y'}(T(x',y')-I(x+x',y+y'))^2}{\sqrt[2]{{\sum_{x',y'}T(x',y')^2\times}\sum_{x',y'}I(x+x',y+y')^2}}
+\end{gathered}
 &emsp;&emsp;其中$R(x,y)$代表匹配结果矩阵，$I(x+x',y+y')$代表模板移动(x,y)位置对应的待匹配图像矩阵，$T(x',y' )$代表匹配模板矩阵。<br>
 &emsp;&emsp;得到结果后，您可以查找最大值/最小值的位置。将其作为矩形的左上角，并以（w，h）作为矩形的宽度和高度。该矩形是模板区域。
 <div  align="center"><img decoding="async" src="https://raw.githubusercontent.com/mango5505/my_model/main/2.jpg" width="60%" div align=center/><br>模板图像滑过原始图像</div><br>
