@@ -41,10 +41,12 @@ USCT.preprocessing.MatchTemplate(
 步骤四：形态学整形，形成只包含主轮廓边缘的二值图像；<br>
 步骤五：目标轮廓选择<br>
 步骤六：剪裁输出<br>
-<br><br>*模板匹配*<br>
-&emsp;&emsp;模板匹配是一种在较大图像中搜索和查找模板图像位置的方法。OpenCV附带了一个函数cv.matchTemplate（）来实现此目的。它只是将模板图像滑过输入图像（如在 2D 卷积中），并在模板图像下比较输入图像的模板和补丁。它返回一个灰度图像，其中每个像素表示该像素的邻域与模板的匹配程度。
+<div  align="center"><img decoding="async" src="https://raw.githubusercontent.com/mango5505/my_model/main/1.jpg" width="60%" div align=center/><br>预处理前后示意图</div>
 
-如果输入图像的大小为 （WxH），模板图像的大小为 （wxh），则输出图像的大小将为 （W-w+1， H-h+1）。得到结果后，您可以查找最大值/最小值的位置。将其作为矩形的左上角，并以（w，h）作为矩形的宽度和高度。该矩形是模板区域。
+<br><br>*模板匹配*<br>
+
+&emsp;&emsp;模板匹配是一种在较大图像中搜索和查找模板图像位置的方法。OpenCV附带了一个函数cv.matchTemplate（）来实现此目的。它将模板图像滑过输入图像，并在模板图像下比较输入图像的模板和补丁，返回一个灰度图像，其中每个像素表示该像素的邻域与模板的匹配程度。<br>
+&emsp;&emsp;如果输入图像的大小为 （WxH），模板图像的大小为 （wxh），则输出图像的大小将为 （W-w+1， H-h+1）。得到结果后，您可以查找最大值/最小值的位置。将其作为矩形的左上角，并以（w，h）作为矩形的宽度和高度。该矩形是模板区域。
 #### 参考文献
 \[1\]&emsp; OpenCV 3.4.20 *OpenCV-Python Tutorials*,Intel,USA,2000;
 software available at https://github.com/opencv
